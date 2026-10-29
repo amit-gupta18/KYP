@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Policy QA design system
+  Light bluish Atlassian-style surfaces. Components use the Tailwind
+  tokens in tailwind.config.js (brand, ink, canvas, line, lozenge colors).
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color-scheme: light;
+  background: #f7f8f9;
+  color: #172b4d;
+}
+
+::selection {
+  background: #cce0ff;
+  color: #172b4d;
+}
+
+.answer p + p {
+  margin-top: 0.75rem;
+}
+
+.answer ul,
+.answer ol {
+  margin: 0.75rem 0;
+  padding-left: 1.25rem;
+}
+
+.answer ul {
+  list-style: disc;
+}
+
+.answer ol {
+  list-style: decimal;
+}
+
+.answer li + li {
+  margin-top: 0.25rem;
+}
+
+.answer strong {
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.answer h1,
+.answer h2,
+.answer h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: #172b4d;
+}
+
+.answer h1 {
+  font-size: 16px;
+}
+
+.answer h2,
+.answer h3 {
+  font-size: 15px;
+}
+
+.answer a {
+  color: #0055cc;
+  text-decoration: underline;
+}
+
+.answer blockquote {
+  margin: 0.75rem 0;
+  border-left: 3px solid #0c66e4;
+  background: #e9f2ff;
+  padding: 0.5rem 0.75rem;
+  color: #172b4d;
+}
+
+.answer code {
+  border-radius: 3px;
+  background: #f1f2f4;
+  padding: 0 0.25rem;
+  font-size: 13px;
+}
+
+.answer pre {
+  margin: 0.75rem 0;
+  overflow-x: auto;
+  border-radius: 8px;
+  background: #1c2b41;
+  padding: 0.75rem;
+  color: #ffffff;
+}
+
+.answer pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.answer table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 13px;
+}
+
+.answer th,
+.answer td {
+  border-bottom: 1px solid #dcdfe4;
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.answer th {
+  background: #f1f2f4;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
